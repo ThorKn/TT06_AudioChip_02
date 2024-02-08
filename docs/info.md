@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This is an AudioChip that outputs two Audiosignals as PWM. It can be used as a audio generating device for electronic instruments, namely modular synthesizers. It is planned to build a Eurorack module for a modular synthesizer around this mikrochip. The inputs and outputs are designed to fit into the concept of such instruments. The source code of AudioChip is written in spinalHDL and generates verilog. The SpinalHDL source resides in this repository: Add link here.
 
 ## How to test
 
-Explain how to use your project
+Attach a lowpass filters to the PWM outputs and you get analog audio signal waveforms. The inputs alter the waveforms.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Lowpass filters for the PWM output.
