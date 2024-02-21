@@ -17,4 +17,4 @@ Attach a lowpass filters to the PWM outputs and you get analog audio signal wave
 
 ## External hardware
 
-Lowpass filters for the PWM output.
+Lowpass filters for the PWM outputs.
