@@ -20,14 +20,16 @@ module tt_um_thorkn_audiochip_v2 (
 
   wire  pwm_1_out;
   wire  pwm_2_out;
+  wire  [11:0] frequency;
   wire 	reset;
   
   assign reset = !rst_n;
+  assign frequency = {uio_in[7:4],ui_in[7:0]};
 
   PWMaudio pwm_audio (
     .io_pwm_1           (pwm_1_out                ), //o
     .io_pwm_2           (pwm_2_out                ), //o
-    .io_frequency       ({uio_in[7:4],ui_in[7:0]} ), //i
+    .io_frequency       (frequency                ), //i
     .io_adsr_switch     (uio_in[3]                ), //i
     .io_adsr_choice     (uio_in[2:0]              ), //i
     .clk                (clk                      ), //i
