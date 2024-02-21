@@ -25,13 +25,14 @@ module tt_um_thorkn_audiochip_v2 (
   assign reset = !rst_n;
 
   PWMaudio pwm_audio (
-    .io_pwm_1       (pwm_1_out              ), //o
-    .io_pwm_2       (pwm_2_out              ), //o
-    .io_frequency   (uio_in[7:4], ui_in[7:0]), //i
-    .io_adsr_switch (uio_in[3]              ), //i
-    .io_adsr_choice (uio_in[2:0]            ), //i
-    .clk            (clk                    ), //i
-    .reset          (reset                  )  //i
+    .io_pwm_1           (pwm_1_out              ), //o
+    .io_pwm_2           (pwm_2_out              ), //o
+    .io_frequency[11:8] (uio_in[7:4]            ), //i
+    .io_frequency[7:0]  (ui_in[7:0]             ), //i
+    .io_adsr_switch     (uio_in[3]              ), //i
+    .io_adsr_choice     (uio_in[2:0]            ), //i
+    .clk                (clk                    ), //i
+    .reset              (reset                  )  //i
   );
 
   // All output pins must be assigned. If not used, assign to 0.
