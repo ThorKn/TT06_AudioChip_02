@@ -7,7 +7,7 @@
 
 `define default_netname none
 
-module tt06_thorkn_audiochip_v2 (
+module tt_um_thorkn_audiochip_v2 (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
